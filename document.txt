@@ -1,0 +1,109 @@
+Este código HTML y JavaScript crea un cuestionario (quiz) interactivo en una página web. Aquí está la documentación del código:
+
+HTML (index.html)
+Document Structure:
+<!DOCTYPE html>: Define el tipo de documento HTML.
+<html lang="en">: Elemento raíz del documento con el atributo de idioma.
+<head>: Contiene información sobre el documento como metadatos, título y enlaces a recursos externos.
+charset="UTF-8": Especifica el conjunto de caracteres como UTF-8.
+viewport: Configura la escala inicial y las dimensiones de la ventana de visualización.
+<title>: Define el título de la página.
+<link rel="stylesheet" href="styles.css">: Enlaza la hoja de estilos externa al documento.
+<body>: Contiene el contenido visible de la página.
+Estructura de contenedores y elementos que representan el contenido de la página.
+<script src="script.js"></script>: Enlaza el archivo JavaScript externo.
+JavaScript (script.js)
+Preguntas y Respuestas:
+
+const questions: Array de objetos que contiene preguntas y sus respectivas respuestas, junto con información sobre si la respuesta es correcta o incorrecta.
+Selección de Elementos del DOM:
+
+const questionsElement, answerButtons, nextButton: Variables que almacenan referencias a elementos HTML mediante getElementById.
+Manejo del Estado del Quiz:
+
+let currenQuestionIndex = 0: Índice de la pregunta actual.
+let score = 0: Puntuación del jugador.
+Funciones Principales:
+
+startQuiz(): Inicia el cuestionario restableciendo el estado y mostrando la primera pregunta.
+showQuestion(): Muestra la pregunta actual y sus opciones de respuesta.
+resetState(): Restablece el estado ocultando el botón "Next" y eliminando las opciones de respuesta anteriores.
+selectAnswer(e): Maneja la selección de respuestas, actualiza la puntuación y muestra el botón "Next".
+showScore(): Muestra la puntuación final y permite reiniciar el cuestionario.
+handleNextButton(): Maneja el avance a la siguiente pregunta o muestra la puntuación final.
+Event Listeners:
+
+nextButton.addEventListener("click", ...): Maneja los clics en el botón "Next".
+CSS (styles.css)
+Estilos Generales:
+
+Establece estilos generales para el cuerpo (body) y otros elementos básicos.
+Usa la fuente "Times New Roman" para el texto.
+Estilos del Contenedor de Bienvenida:
+
+Establece estilos para el contenedor de bienvenida, incluyendo el color de fondo y bordes redondeados.
+Estilos del Cuestionario:
+
+Define estilos para el título del cuestionario y las preguntas, así como el contenedor de botones de respuesta.
+Establece estilos para los botones de respuesta y el botón "Next", incluyendo colores de fondo y efectos de transición.
+Utiliza clases como .correct y .incorrect para resaltar respuestas correctas e incorrectas.
+En resumen, este código crea una página web interactiva de quiz utilizando HTML, JavaScript y CSS, donde el usuario puede responder preguntas y recibir retroalimentación inmediata sobre la corrección de sus respuestas.
+
+
+
+Certainly! Here's the documentation for the provided HTML, JavaScript, and CSS code:
+
+### HTML (index.html)
+
+- **Document Structure:**
+  - `<!DOCTYPE html>`: Defines the HTML document type.
+  - `<html lang="en">`: Root element of the document with the language attribute.
+  - `<head>`: Contains information about the document such as metadata, title, and links to external resources.
+    - `charset="UTF-8"`: Specifies the character set as UTF-8.
+    - `viewport`: Configures the initial scale and dimensions of the viewport.
+    - `<title>`: Defines the title of the page.
+    - `<link rel="stylesheet" href="styles.css">`: Links the external stylesheet to the document.
+  - `<body>`: Contains the visible content of the page.
+    - Structure of containers and elements representing the content of the page.
+    - `<script src="script.js"></script>`: Links the external JavaScript file.
+
+### JavaScript (script.js)
+
+- **Questions and Answers:**
+  - `const questions`: Array of objects containing questions and their respective answers, along with information on whether the answer is correct or incorrect.
+
+- **DOM Element Selection:**
+  - `const questionsElement`, `answerButtons`, `nextButton`: Variables storing references to HTML elements using `getElementById`.
+
+- **Quiz State Handling:**
+  - `let currenQuestionIndex = 0`: Index of the current question.
+  - `let score = 0`: Player's score.
+
+- **Main Functions:**
+  - `startQuiz()`: Initiates the quiz by resetting the state and showing the first question.
+  - `showQuestion()`: Displays the current question and its answer options.
+  - `resetState()`: Resets the state by hiding the "Next" button and removing previous answer options.
+  - `selectAnswer(e)`: Handles answer selection, updates the score, and shows the "Next" button.
+  - `showScore()`: Displays the final score and allows restarting the quiz.
+  - `handleNextButton()`: Handles advancing to the next question or showing the final score.
+
+- **Event Listeners:**
+  - `nextButton.addEventListener("click", ...)`: Handles clicks on the "Next" button.
+
+### CSS (styles.css)
+
+- **General Styles:**
+  - Sets general styles for the body (`body`) and other basic elements.
+  - Uses the "Times New Roman" font for text.
+
+- **Welcome Container Styles:**
+  - Defines styles for the welcome container, including background color and rounded borders.
+
+- **Quiz Styles:**
+  - Sets styles for the quiz title and questions, as well as the container for answer buttons.
+  - Defines styles for answer buttons and the "Next" button, including background colors and transition effects.
+  - Utilizes classes like `.correct` and `.incorrect` to highlight correct and incorrect answers.
+
+---
+
+In summary, this code creates an interactive quiz web page using HTML, JavaScript, and CSS, where users can answer questions and receive immediate feedback on the correctness of their responses.
